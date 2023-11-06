@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-gradient-to-tl from-sky-300 to-sky-800 overflow-y-hidden
+}
+
+.navBar{
+    @apply flex items-center pl-5 bg-transparent py-3 shadow-xl;
+}
+.navText{
+    @apply font-title text-2xl text-pink-300
+}
+.main{
+    @apply bg-transparent min-h-screen lg:p-5 md:p-2 text-pink-200 font-title
+}
+.home{
+    @apply font-title
+}
+.card{
+    @apply rounded bg-blue-900 border-gray-200 shadow-lg overflow-hidden relative p-0 pb-2 mx-2;
+}
+
+.question-img{
+  @apply flex-1 rounded h-80 overflow-hidden relative p-0 mx-2 w-64
+}
+
+.pagination-Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    height: 40px;
+  }
+  .pagination-Btn a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #1d4ed8;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .pagination-Btn a:hover{
+    color: #dbdbdb !important;
+    background-color: #1d4ed8;
+  }
+  .paginationActive a{
+    color: #dbdbdb !important;
+    background-color: #1d4ed8 !important;
+  }
