@@ -12,7 +12,6 @@ const Home = () => {
     axios
       .get("https://pick-a-pile-v1.onrender.com/api/v1/all-questions")
       .then((response) => {
-        console.log(response.data);
         setData(response.data);
         setIsPending(false);
       })

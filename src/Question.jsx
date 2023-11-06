@@ -14,13 +14,13 @@ const Question = () => {
   const { QuestionId } = useParams();
   const [question, setQuestion] = useState();
   const [questionName, setQuestionName] = useState();
+  const [questionDesp , setQuestionDesp] = useState();
 
   console.log(QuestionId);
   useEffect(() => {
     axios
       .get("https://pick-a-pile-v1.onrender.com/api/v1/" + QuestionId)
       .then((response) => {
-        console.log(response.data);
         setData(response.data);
         setIsPendingData(false);
         setQuestion(response.data.Question);
@@ -32,8 +32,8 @@ const Question = () => {
     axios
       .get("https://pick-a-pile-v1.onrender.com/api/v1/question/" + QuestionId)
       .then((response) => {
-        console.log(response.data.QuestionName);
         setQuestionName(response.data.QuestionName);
+        setQuestionDesp(response.data.QuestionDesp)
         setIsPendingQuestion(false);
       })
       .catch((err) => console.log(err));
@@ -43,17 +43,18 @@ const Question = () => {
     }
   }, []);
   const photo = [];
-photo[0] = bridge;
-photo[1] = entrance;
-photo[2] = fish;
-photo[3] = flowers;
+  photo[0] = bridge;
+  photo[1] = entrance;
+  photo[2] = fish;
+  photo[3] = flowers;
 
-const answerPhoto = data && data.map((d, index) => (
-  <Link to="#" key={index}>
-    <img src={photo[index]} alt="oo" className="question-img" />
-  </Link>
-));
-
+  const answerPhoto =
+    data &&
+    data.map((d, index) => (
+      <Link to={"/"+d.QuestionId+'/'+d.AnswerId} key={index}>
+        <img src={photo[index]} alt="oo" className="question-img" />
+      </Link>
+    ));
 
   return (
     <div className="flex justify-center items-center m-0 p-0 overflow-y-auto">
@@ -65,24 +66,39 @@ const answerPhoto = data && data.map((d, index) => (
         )}
         {!ispending && (
           <>
-            <div className="flex justify-center items-center my-5">
+            <div className="flex justify-center items-center mt-3 mb-2">
               {ispendingQuestion && (
                 <h1 className="text-xl flex items-center justify-center">
                   Loading...
                 </h1>
               )}
               {questionName && (
+                <>
                 <h2 className="text-xl font-medium">{questionName}</h2>
+                </>
+              )}
+            </div>
+            <div className="flex justify-center items-center mb-5">
+              {ispendingQuestion && (
+                <h1 className="text-xl flex items-center justify-center">
+                  Loading...
+                </h1>
+              )}
+              {questionDesp && (
+                <>
+                <h2 className="text-lg font-medium text-center">{questionDesp}</h2>
+                </>
               )}
             </div>
             <div className="flex justify-center items-center my-5">
-              <h5 className="text-md">သင်ကြိုက်နှစ်သက်သော ပုံကိုရွေးချယ်ပြီး ကြည့်ရှုပါ။</h5>
+              <h5 className="text-md">
+                သင်ကြိုက်နှစ်သက်သော ပုံကိုရွေးချယ်ပြီး ကြည့်ရှုပါ။
+              </h5>
             </div>
-            
+
             <div className="flex justify-center items-center mt-3">
-                {answerPhoto}
+              {answerPhoto}
             </div>
-             
           </>
         )}
       </div>

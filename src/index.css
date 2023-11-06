@@ -25,7 +25,7 @@ body{
 }
 
 .question-img{
-  @apply flex-1 rounded h-96 overflow-hidden relative p-0 mx-2 w-72
+  @apply flex-1 rounded h-80 overflow-hidden relative p-0 mx-2 w-64
 }
 
 .pagination-Btn {
