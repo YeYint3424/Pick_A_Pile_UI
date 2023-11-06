@@ -1,69 +1,56 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body{
+    @apply bg-gradient-to-tl from-sky-300 to-sky-800 overflow-y-hidden
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.navBar{
+    @apply flex items-center pl-5 bg-transparent py-3 shadow-xl;
 }
-a:hover {
-  color: #535bf2;
+.navText{
+    @apply font-title text-2xl text-pink-300
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.main{
+    @apply bg-transparent min-h-screen lg:p-5 md:p-2 text-pink-200 font-title
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.home{
+    @apply font-title
+}
+.card{
+    @apply rounded bg-blue-900 border-gray-200 shadow-lg overflow-hidden relative p-0 pb-2 mx-2;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.question-img{
+  @apply flex-1 rounded h-96 overflow-hidden relative p-0 mx-2 w-72
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.pagination-Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    height: 40px;
   }
-  a:hover {
-    color: #747bff;
+  .pagination-Btn a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #1d4ed8;
+    color: #ffffff;
+    cursor: pointer;
   }
-  button {
-    background-color: #f9f9f9;
+  .pagination-Btn a:hover{
+    color: #dbdbdb !important;
+    background-color: #1d4ed8;
   }
-}
+  .paginationActive a{
+    color: #dbdbdb !important;
+    background-color: #1d4ed8 !important;
+  }
