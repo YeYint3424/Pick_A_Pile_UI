@@ -28,9 +28,9 @@ const Answer = () => {
   return (
     
     <>
-    { isPending && <h1 className="text-2xl flex items-center justify-center"> Loading . . .  </h1>}
+    { isPending && <h1 className="text-4xl flex items-center justify-center mt-32"> <i class="fa-solid fa-spinner fa-spin-pulse"></i>  </h1>}
       {pileNo && (
-        <div className="flex items-center justify-center text-3xl">{pileNo}</div>
+        <div className="flex items-center justify-center text-3xl mt-14">{pileNo}</div>
       )}
 
       {answerDesp && (

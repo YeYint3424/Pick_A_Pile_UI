@@ -54,7 +54,7 @@ const Home = () => {
         ကျေးဇူးပြု၍ သင်သိချင်သော အကြောင်းအရာကို ရွေးချယ်ပါ။
       </h2>
       <div className="flex justify-evenly mt-6">
-        {ispending && <h1 className="text-5xl">Loading...</h1>}
+        {ispending && <h1 className="text-5xl"><i class="fa-solid fa-spinner fa-spin-pulse"></i></h1>}
         {data && displayCard}
       </div>
       <div className="flex items-center justify-center mt-5">

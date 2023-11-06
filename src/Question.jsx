@@ -59,17 +59,13 @@ const Question = () => {
   return (
     <div className="flex justify-center items-center m-0 p-0 overflow-y-auto">
       <div className="p-4">
-        {ispending && (
-          <h1 className="text-5xl flex items-center justify-center">
-            Loading...
-          </h1>
-        )}
+        
         {!ispending && (
           <>
             <div className="flex justify-center items-center mt-3 mb-2">
               {ispendingQuestion && (
-                <h1 className="text-xl flex items-center justify-center">
-                  Loading...
+                <h1 className="text-5xl flex items-center justify-center">
+                  <i class="fa-solid fa-spinner fa-spin-pulse"></i>
                 </h1>
               )}
               {questionName && (
@@ -79,11 +75,7 @@ const Question = () => {
               )}
             </div>
             <div className="flex justify-center items-center mb-5">
-              {ispendingQuestion && (
-                <h1 className="text-xl flex items-center justify-center">
-                  Loading...
-                </h1>
-              )}
+              
               {questionDesp && (
                 <>
                 <h2 className="text-lg font-medium text-center">{questionDesp}</h2>
