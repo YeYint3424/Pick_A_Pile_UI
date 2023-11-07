@@ -32,7 +32,7 @@ const Home = () => {
           <Link to={"/"+ q.QuestionId}><div key={q.QuestionId} className="flex-3 card">
             <img src={wave} alt="wave img" className="rounded h-96" />
             <h5 className="flex items-center justify-center">
-              {q.QuestionName.slice(0, 30)} . . .
+              {q.QuestionName.slice(0, 16)} . . .
             </h5>
           </div>
           </Link>
