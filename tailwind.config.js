@@ -13,6 +13,9 @@ export default {
       },
       fontFamily : {
         title : ['Agbalumo']
+      },
+      minHeight: {
+        fullScreen: "91.7vh" 
       }
     },
   },

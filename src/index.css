@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gradient-to-tl from-sky-300 to-sky-800 overflow-y-hidden
+    @apply bg-gradient-to-tl from-sky-300 to-sky-800 
 }
 
 .navBar{
