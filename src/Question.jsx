@@ -65,7 +65,7 @@ const Question = () => {
             <div className="flex justify-center items-center mt-3 mb-2">
               {ispendingQuestion && (
                 <h1 className="text-5xl flex items-center justify-center">
-                  <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+                  <i className="fa-solid fa-spinner fa-spin-pulse"></i>
                 </h1>
               )}
               {questionName && (
