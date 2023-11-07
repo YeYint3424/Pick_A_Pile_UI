@@ -29,7 +29,7 @@ const Home = () => {
   const displayCard =
     data && Array.isArray(data)
       ? data.slice(pagesVisited, pagesVisited + cardPerPage).map((q) => (
-          <Link to={"/"+ q.QuestionId}><div key={q.QuestionId} className="2xl:flex-1 xl:flex-1 md:flex-1 lg:flex-1 card">
+          <Link to={"/"+ q.QuestionId}><div key={q.QuestionId} className="2xl:flex-1 xl:flex-1 md:flex-1 lg:flex-1 card p-0">
             <img src={wave} alt="wave img" className="rounded 2xl:h-96 xl:h-96 lg:h-80 md:h-72 object-cover" />
             <h5 className="flex items-center justify-center">
               {q.QuestionName.slice(0, 16)} . . .
@@ -47,14 +47,14 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h2 className="flex justify-center text-xl mb-2">
+      <h2 className="flex justify-center text-xl mb-2 text-center">
         Please Choose what you want to know...
       </h2>
       <h2 className="flex justify-center text-lg text-center px-3">
         ကျေးဇူးပြု၍ သင်သိချင်သော အကြောင်းအရာကို ရွေးချယ်ပါ။
       </h2>
       <div className="2xl:flex xl:flex lg:flex md:flex justify-evenly mt-6">
-        {ispending && <h1 className="flex justify-center items-center text-5xl"><i class="fa-solid fa-spinner fa-spin-pulse"></i></h1>}
+        {ispending && <h1 className="flex justify-center items-center text-5xl"><i className="fa-solid fa-spinner fa-spin-pulse"></i></h1>}
         {data && displayCard}
       </div>
       <div className="flex items-center justify-center mt-4">

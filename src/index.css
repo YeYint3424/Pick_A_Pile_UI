@@ -9,7 +9,7 @@ body{
 }
 
 .navBar{
-    @apply flex items-center pl-5 bg-transparent py-3 shadow-xl;
+    @apply flex items-center px-5 bg-transparent py-3 shadow-xl justify-between;
 }
 .navText{
     @apply font-title text-2xl text-pink-300
