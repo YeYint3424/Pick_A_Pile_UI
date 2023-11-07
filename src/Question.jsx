@@ -78,12 +78,12 @@ const Question = () => {
               
               {questionDesp && (
                 <>
-                <h2 className="text-lg font-medium text-center">{questionDesp}</h2>
+                <h2 className="text-md font-medium text-center">{questionDesp}</h2>
                 </>
               )}
             </div>
             <div className="flex justify-center items-center my-5">
-              <h5 className="text-md">
+              <h5 className="text-sm font-thin">
                 သင်ကြိုက်နှစ်သက်သော ပုံကိုရွေးချယ်ပြီး ကြည့်ရှုပါ။
               </h5>
             </div>

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body{
-    @apply bg-gradient-to-tl from-sky-300 to-sky-800 
+    @apply bg-gradient-to-tl from-sky-300 to-sky-800
 }
 
 .navBar{
@@ -15,17 +15,17 @@ body{
     @apply font-title text-2xl text-pink-300
 }
 .main{
-    @apply bg-transparent min-h-screen lg:p-5 md:p-2 text-pink-200 font-title
+    @apply bg-transparent min-h-fullScreen lg:p-5 md:p-2 text-pink-200 font-title
 }
 .home{
     @apply font-title
 }
 .card{
-    @apply rounded bg-blue-900 border-gray-200 shadow-lg overflow-hidden relative p-0 pb-2 mx-2;
+    @apply rounded bg-blue-900 border-gray-200 shadow-lg overflow-hidden relative p-0 pb-2 mx-2 mb-5 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0;
 }
 
 .question-img{
-  @apply flex-1 rounded h-80 overflow-hidden relative p-0 mx-2 w-64
+  @apply flex-1 rounded 2xl:h-80 xl:h-72 lg:h-64 md:h-64 h-32 overflow-hidden relative p-0 mx-2 2xl:w-64 xl:w-52 lg:w-44 md:w-44 w-28
 }
 
 .pagination-Btn {
@@ -39,8 +39,8 @@ body{
   }
   .pagination-Btn a{
     text-decoration: none;
-    padding: 10px;
-    margin: 8px;
+    padding: 5px;
+    margin: 4px;
     border-radius: 5px;
     border: 1px solid #1d4ed8;
     color: #ffffff;
