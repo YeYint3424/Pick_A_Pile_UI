@@ -15,7 +15,7 @@ body{
     @apply font-title text-2xl text-pink-300
 }
 .main{
-    @apply bg-transparent min-h-fullScreen lg:p-5 md:p-2 text-pink-200 font-title
+    @apply bg-transparent min-h-fullScreen lg:p-5 md:p-3 sm:p-3 text-pink-200 font-title
 }
 .home{
     @apply font-title
