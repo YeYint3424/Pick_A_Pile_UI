@@ -1,56 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-    @apply bg-gradient-to-tl from-sky-300 to-sky-800
+body {
+  @apply bg-gradient-to-tl from-sky-300 to-sky-800;
 }
 
-.navBar{
-    @apply flex items-center px-5 bg-transparent py-3 shadow-xl justify-between;
+.navBar {
+  @apply flex items-center px-5 bg-transparent py-3 shadow-xl justify-between;
 }
-.navText{
-    @apply font-title text-2xl text-pink-300
+.navText {
+  @apply font-title text-2xl text-pink-300;
 }
+
 .main{
     @apply bg-transparent min-h-fullScreen 2xl:p-10 xl:p-10 lg:p-7 md:p-5 sm:p-5 text-pink-200 font-title
 }
-.home{
-    @apply font-title
+.home {
+  @apply font-title;
 }
-.card{
-    @apply rounded bg-blue-900 border-gray-200 shadow-lg overflow-hidden relative p-0 pb-2 mx-2 mb-5 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0;
+.card {
+  @apply rounded bg-blue-900 border-gray-200 shadow-lg overflow-hidden relative p-0 pb-2 mx-2 mb-5 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0;
 }
 
-.question-img{
-  @apply flex-1 rounded 2xl:h-80 xl:h-72 lg:h-64 md:h-64 h-32 overflow-hidden relative p-0 mx-2 2xl:w-64 xl:w-52 lg:w-44 md:w-44 w-28
+.question-img {
+  @apply flex-1 rounded 2xl:h-80 xl:h-72 lg:h-64 md:h-64 h-32 overflow-hidden relative p-0 mx-2 2xl:w-64 xl:w-52 lg:w-44 md:w-44 w-28;
 }
 
 .pagination-Btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    width: 80%;
-    height: 40px;
-  }
-  .pagination-Btn a{
-    text-decoration: none;
-    padding: 5px;
-    margin: 4px;
-    border-radius: 5px;
-    border: 1px solid #1d4ed8;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  .pagination-Btn a:hover{
-    color: #dbdbdb !important;
-    background-color: #1d4ed8;
-  }
-  .paginationActive a{
-    color: #dbdbdb !important;
-    background-color: #1d4ed8 !important;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 80%;
+  height: 40px;
+}
+.pagination-Btn a {
+  text-decoration: none;
+  padding: 5px;
+  margin: 4px;
+  border-radius: 5px;
+  border: 1px solid #1d4ed8;
+  color: #ffffff;
+  cursor: pointer;
+}
+.pagination-Btn a:hover {
+  color: #dbdbdb !important;
+  background-color: #1d4ed8;
+}
+.paginationActive a {
+  color: #dbdbdb !important;
+  background-color: #1d4ed8 !important;
+}
