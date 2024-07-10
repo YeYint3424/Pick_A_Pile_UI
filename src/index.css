@@ -14,8 +14,9 @@ body {
 .navText {
   @apply font-title text-2xl text-pink-300;
 }
-.main {
-  @apply bg-transparent min-h-fullScreen lg:p-5 md:p-2 text-pink-200 font-title;
+
+.main{
+    @apply bg-transparent min-h-fullScreen 2xl:p-10 xl:p-10 lg:p-7 md:p-5 sm:p-5 text-pink-200 font-title
 }
 .home {
   @apply font-title;
