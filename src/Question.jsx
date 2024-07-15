@@ -14,7 +14,7 @@ const Question = () => {
   const { QuestionId } = useParams();
   const [question, setQuestion] = useState();
   const [questionName, setQuestionName] = useState();
-  const [questionDesp , setQuestionDesp] = useState();
+  const [questionDesp, setQuestionDesp] = useState();
 
   console.log(QuestionId);
   useEffect(() => {
@@ -33,8 +33,13 @@ const Question = () => {
       .get("https://pick-a-pile-v1.onrender.com/api/v1/question/" + QuestionId)
       .then((response) => {
         setQuestionName(response.data.QuestionName);
-        setQuestionDesp(response.data.QuestionDesp)
+        setQuestionDesp(response.data.QuestionDesp);
         setIsPendingQuestion(false);
+        GTMEvent({
+          event: "Question",
+          question: response.data.QuestionName,
+          description: response.data.QuestionDesp,
+        });
       })
       .catch((err) => console.log(err));
 
@@ -51,7 +56,7 @@ const Question = () => {
   const answerPhoto =
     data &&
     data.map((d, index) => (
-      <Link to={"/"+d.QuestionId+'/'+d.AnswerId} key={index}>
+      <Link to={"/" + d.QuestionId + "/" + d.AnswerId} key={index}>
         <img src={photo[index]} alt="oo" className="question-img" />
       </Link>
     ));
@@ -59,7 +64,6 @@ const Question = () => {
   return (
     <div className="flex justify-center items-center m-0 p-0 overflow-y-auto">
       <div className="p-4">
-        
         {!ispending && (
           <>
             <div className="flex justify-center items-center mt-3 mb-2">
@@ -70,15 +74,16 @@ const Question = () => {
               )}
               {questionName && (
                 <>
-                <h2 className="text-xl font-medium">{questionName}</h2>
+                  <h2 className="text-xl font-medium">{questionName}</h2>
                 </>
               )}
             </div>
             <div className="flex justify-center items-center mb-5">
-              
               {questionDesp && (
                 <>
-                <h2 className="text-md font-medium text-center">{questionDesp}</h2>
+                  <h2 className="text-md font-medium text-center">
+                    {questionDesp}
+                  </h2>
                 </>
               )}
             </div>
