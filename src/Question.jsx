@@ -37,8 +37,8 @@ const Question = () => {
         setQuestionDesp(response.data.QuestionDesp);
         setIsPendingQuestion(false);
         GTMEvent({
-          event: "Custom Event",
-          question: response.data.QuestionName,
+          event: "question",
+          Question: response.data.QuestionName,
           description: response.data.QuestionDesp,
         });
       })
