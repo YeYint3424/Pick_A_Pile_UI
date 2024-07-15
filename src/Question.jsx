@@ -5,6 +5,7 @@ import fish from "/fish.jpg";
 import flowers from "/flowers.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { GTMEvent } from "./assets/GTMEvent";
 
 const Question = () => {
   const [data, setData] = useState([]);
